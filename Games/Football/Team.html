@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build a Set of Football Team Cards</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 class="title">Team Stats</h1>
+    <main>
+      <div class="team-stats">
+        <p>Team: <span id="team"></span></p>
+        <p>Year: <span id="year"></span></p>
+        <p>Head Coach: <span id="head-coach"></span></p>
+      </div>
+
+      <!-- <section id="match-statistics">
+        <h2>Match Statistics</h2>
+
+        <div class="match-statistics-grid">
+          <div class="match-stat-card">
+            <h3>Matches Played</h3>
+            <p id="matches-played">0</p>
+          </div>
+
+          <div class="match-stat-card">
+            <h3>Wins</h3>
+            <p id="matches-won">0</p>
+          </div>
+
+          <div class="match-stat-card">
+            <h3>Draws</h3>
+            <p id="matches-drawn">0</p>
+          </div>
+
+          <div class="match-stat-card">
+            <h3>Losses</h3>
+            <p id="matches-lost">0</p>
+          </div>
+
+          <div class="match-stat-card">
+            <h3>Goals Scored</h3>
+            <p id="total-goals-scored">0</p>
+          </div>
+
+          <div class="match-stat-card">
+            <h3>Goals Conceded</h3>
+            <p id="total-goals-conceded">0</p>
+          </div>
+        </div>
+      </section> -->
+
+      <section id="match-statistics">
+        <div class="match-summary">
+          <!-- Circular match chart -->
+          <div class="match-chart">
+            <div class="match-chart-center">
+              <strong id="matches-played">14</strong>
+              <span>Matches<br />played</span>
+            </div>
+          </div>
+
+          <!-- Wins, draws, and losses -->
+          <div class="match-results">
+            <div class="match-result">
+              <strong id="matches-won">9</strong>
+              <span class="result-dot won-dot"></span>
+              <span>Won</span>
+            </div>
+
+            <div class="match-result">
+              <strong id="matches-drawn">5</strong>
+              <span class="result-dot drawn-dot"></span>
+              <span>Drawn</span>
+            </div>
+
+            <div class="match-result">
+              <strong id="matches-lost">0</strong>
+              <span class="result-dot lost-dot"></span>
+              <span>Lost</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Goals statistics -->
+        <div class="goals-summary">
+          <div class="goals-stat">
+            <strong id="total-goals-scored">35</strong>
+            <span>Goals</span>
+            <small id="goals-average">2.5 avg. per match</small>
+          </div>
+
+          <div class="goals-stat">
+            <strong id="total-goals-conceded">18</strong>
+            <span>Goals conceded</span>
+            <small id="conceded-average">1.29 avg. per match</small>
+          </div>
+        </div>
+      </section>
+
+      <label class="options-label" for="players">Filter Teammates:</label>
+      <select name="players" id="players">
+        <option value="all">All Players</option>
+        <option value="forward">Position Forward</option>
+        <option value="midfielder">Position Midfielder</option>
+        <option value="defender">Position Defender</option>
+        <option value="goalkeeper">Position Goalkeeper</option>
+      </select>
+
+      <div class="cards" id="player-cards"></div>
+    </main>
+    <p>&copy; Henicken 2026</p>
+    <script src="Cards.js" defer></script>
+  </body>
+</html>

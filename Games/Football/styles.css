@@ -1,0 +1,281 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dark-grey: #0a0a23;
+  --light-grey: #abc5de;
+  --white: #ffffff;
+  --black: #000;
+}
+
+body {
+  background-color: var(--dark-grey);
+  text-align: center;
+  padding: 10px;
+}
+
+.title,
+.options-label,
+.team-stats,
+footer {
+  color: var(--white);
+}
+
+.title {
+  margin: 1.3rem 0;
+}
+
+.team-stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-size: 1.3rem;
+  margin: 1.2rem 0;
+}
+
+.options-label {
+  font-size: 1.2rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-card {
+  background-color: var(--light-grey);
+  padding: 1.3rem;
+  margin: 1.2rem;
+  width: 300px;
+  border-radius: 15px;
+}
+
+/* #match-statistics {
+margin: 30px 0;
+}
+
+.match-statistics-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+gap: 16px;
+}
+
+.match-stat-card {
+padding: 20px;
+text-align: center;
+border: 1px solid #bbf7d0;
+border-radius: 12px;
+background-color: #f0fdf4;
+}
+
+.match-stat-card h3 {
+font-size: 15px;
+margin-bottom: 10px;
+}
+
+.match-stat-card p {
+font-size: 28px;
+font-weight: bold;
+margin: 0;
+}
+ */
+
+ /* Match statistics section */
+#match-statistics {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 40px 45px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  color: #18323a;
+}
+
+/* Chart and results side by side */
+.match-summary {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Circular chart */
+.match-chart {
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 1;
+  margin: auto;
+  border-radius: 50%;
+
+  background: conic-gradient(
+    from -90deg,
+    #f3d34a 0deg 128deg,
+    #ffffff 128deg 132deg,
+    #e85b16 132deg 356deg,
+    #ffffff 356deg 360deg
+  );
+
+  display: grid;
+  place-items: center;
+  transform: rotate(-10deg);
+}
+
+/* Center of the circle */
+.match-chart-center {
+  width: 94%;
+  height: 94%;
+  border-radius: 50%;
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  transform: rotate(10deg);
+}
+
+.match-chart-center strong {
+  font-size: 58px;
+  line-height: 1.2;
+}
+
+.match-chart-center span {
+  font-size: 23px;
+  line-height: 1.3;
+  color: #52636a;
+}
+
+/* Won, drawn, and lost rows */
+.match-results {
+  display: flex;
+  flex-direction: column;
+}
+
+.match-result {
+  display: grid;
+  grid-template-columns: 60px 18px 1fr;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 0;
+  border-bottom: 2px solid #eeeeee;
+}
+
+.match-result:last-child {
+  border-bottom: none;
+}
+
+.match-result strong {
+  font-size: 42px;
+  text-align: center;
+}
+
+.match-result > span:last-child {
+  font-size: 27px;
+  color: #52636a;
+}
+
+.result-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
+.won-dot {
+  background-color: #e85b16;
+}
+
+.drawn-dot {
+  background-color: #f3d34a;
+}
+
+.lost-dot {
+  background-color: #f29b00;
+}
+
+/* Goals section */
+.goals-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  margin-top: 65px;
+}
+
+.goals-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.goals-stat strong {
+  font-size: 48px;
+}
+
+.goals-stat > span {
+  font-size: 25px;
+  color: #52636a;
+}
+
+.goals-stat small {
+  font-size: 19px;
+  color: #7b8589;
+}
+
+/* Responsive layout for phones */
+@media (max-width: 600px) {
+  #match-statistics {
+    padding: 25px 20px;
+  }
+
+  .match-summary {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .match-chart {
+    max-width: 220px;
+  }
+
+  .match-result {
+    padding: 12px 0;
+  }
+
+  .match-result strong {
+    font-size: 32px;
+  }
+
+  .match-result > span:last-child {
+    font-size: 22px;
+  }
+
+  .goals-summary {
+    gap: 20px;
+    margin-top: 35px;
+  }
+
+  .goals-stat strong {
+    font-size: 36px;
+  }
+
+  .goals-stat > span {
+    font-size: 19px;
+  }
+
+  .goals-stat small {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-stats {
+    flex-direction: column;
+  }
+}
